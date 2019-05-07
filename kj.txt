@@ -1,0 +1,33 @@
+vue-jsonp 
+适合返回值通过回调函数拿过来的数据
+
+在组件里使用
+    在main.js里
+      import VueJsonp from 'vue-jsonp'
+      Vue.use(VueJsonp)
+    在组件里使用
+     this.$jsonp(url,{参数}).then().catch()
+
+在store里使用
+   
+  import VueJsonp from 'vue-jsonp'
+  
+在actions里的方法里
+    Vue.jsonp(url).then().catch()
+
+分模块 
+
+   modules:{
+	模块的名字:模块对象的引用
+  }
+
+this.$store.state.模块的名字.变量
+computed:{
+   属性(){
+	...mapState(["模块的名字","变量"]
+   }
+}
+
+state,getters,mutations,actions,modules
+
+动画
